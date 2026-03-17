@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FamPost AI - Visual Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&family=Caveat:wght@600&family=Lobster&family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- html2canvas for capturing DOM as image -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-fire-flame-curved bg-gradient"></i> FamPost <span>AI</span>
+            </div>
+            <p>Generator Konten Visual Kristiani Premium</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Control Panel -->
+            <section class="control-panel glass-panel">
+                <div class="form-group">
+                    <label for="category-select">Pilih Kategori Konten</label>
+                    <div class="custom-select">
+                        <select id="category-select">
+                            <option value="alkitab">Alkitab (Ayat Hari Ini)</option>
+                            <option value="renungan">Renungan Harian</option>
+                            <option value="janji-tuhan">Janji-Janji Tuhan</option>
+                            <option value="motivasi-kristen">Motivasi Kristen</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tone-select">Pilih Mood / Tone</label>
+                    <div class="custom-select">
+                        <select id="tone-select">
+                            <option value="menyejukkan">Menyejukkan (Damai)</option>
+                            <option value="memberkati">Memberkati (Kasih)</option>
+                            <option value="menguatkan">Menguatkan (Iman)</option>
+                            <option value="sukacita">Sukacita (Pujian)</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="aspect-ratio-select">Rasio Gambar</label>
+                    <div class="custom-select">
+                        <select id="aspect-ratio-select">
+                            <option value="1/1">Square (1:1) - IG/FB Post</option>
+                            <option value="4/5">Portrait (4:5) - IG Post</option>
+                            <option value="9/16">Story (9:16) - Reels/Story</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="font-select">Jenis Font Kutipan</label>
+                    <div class="custom-select">
+                        <select id="font-select">
+                            <option value="'Outfit', sans-serif">Outfit (Modern Sans)</option>
+                            <option value="'Playfair Display', serif">Playfair (Elegan Serif)</option>
+                            <option value="'Montserrat', sans-serif">Montserrat (Tegas & Rapi)</option>
+                            <option value="'Caveat', cursive">Caveat (Tulis Tangan)</option>
+                            <option value="'Lobster', cursive">Lobster (Dekoratif Kaligrafi)</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-icon"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="branding-input">Teks Branding / Watermark</label>
+                    <input type="text" id="branding-input" class="custom-input" placeholder="Misal: @AyatHarian" value="FamPost">
+                </div>
+
+                <div class="form-group">
+                    <label for="quote-input">Teks Konten (Edit Manual)</label>
+                    <textarea id="quote-input" class="custom-input manual-textarea" placeholder="Tulis atau edit teks di sini..." rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Filter & Overlay Visual</label>
+                    <div class="preset-filters">
+                        <button class="filter-btn active" data-filter="dark-cinematic" title="Dark Cinematic" style="background: linear-gradient(to bottom, #111, #000);"></button>
+                        <button class="filter-btn" data-filter="warm-sunset" title="Warm Sunset" style="background: linear-gradient(to bottom, rgba(234,88,12,0.6), rgba(67,20,7,0.9));"></button>
+                        <button class="filter-btn" data-filter="cool-blue" title="Cool Blue" style="background: linear-gradient(to bottom, rgba(14,165,233,0.5), rgba(15,23,42,0.9));"></button>
+                        <button class="filter-btn" data-filter="soft-light" title="Soft Light" style="background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(0,0,0,0.6));"></button>
+                    </div>
+                </div>
+
+                <button id="generate-btn" class="primary-btn pulse">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Konten
+                </button>                
+                <div class="status-indicator">
+                    <span id="loading-text" class="hidden"><i class="fa-solid fa-circle-notch fa-spin"></i> AI sedang merangkai kata dan visual...</span>
+                </div>
+            </section>
+
+            <!-- Preview Section -->
+            <section class="preview-section hidden" id="preview-wrapper">
+                <div class="canvas-header">
+                    <h3>Preview (1080x1080 IG/FB Square)</h3>
+                    <div class="action-buttons">
+                        <button id="regenerate-btn" class="secondary-btn" title="Coba kombinasi lain">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </button>
+                        <button id="share-btn" class="secondary-btn" title="Bagikan (Web Share)">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                        <button id="download-btn" class="success-btn">
+                            <i class="fa-solid fa-download"></i> Unduh
+                        </button>
+                    </div>
+                </div>
+
+                <!-- This is the element that will be captured -->
+                <div class="capture-canvas" id="canvas-element">
+                    <img id="canvas-image" src="" alt="Background Image" crossorigin="anonymous">
+                    <div class="canvas-overlay dark-cinematic" id="canvas-overlay"></div>
+                    <div class="canvas-content">
+                        <div class="quote-wrapper">
+                            <i class="fa-solid fa-quote-left quote-icon"></i>
+                            <p id="canvas-quote" contenteditable="true" spellcheck="false" title="Klik untuk edit teks">Tuhan adalah gembalaku, takkan kekurangan aku.</p>
+                            <i class="fa-solid fa-quote-right quote-icon right"></i>
+                        </div>
+                        <div class="canvas-brand">
+                            <i class="fa-solid fa-fire-flame-curved"></i> <span id="canvas-brand-text">FamPost</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- History Section -->
+            <section class="history-section hidden" id="history-wrapper">
+                <div class="history-header">
+                    <h3>Riwayat Hasil <span class="badge" id="history-count">0</span></h3>
+                    <button class="clear-history-btn" id="clear-history-btn"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+                <div class="history-grid" id="history-grid">
+                    <!-- History items will be injected here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
