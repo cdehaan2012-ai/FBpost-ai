@@ -1,187 +1,74 @@
-// FamPost AI - Mock Data Storage with Categories and Tones
 const aiData = {
     'alkitab': {
         'menyejukkan': {
-            quotes: [
-                "Tuhan adalah gembalaku, takkan kekurangan aku. Ia membaringkan aku di padang yang berumput hijau.",
-                "Damai sejahtera Kukasihkan kepadamu. Damai sejahtera-Ku sendiri kuberikan kepadamu.",
-                "Serahkanlah segala kekuatiranmu kepada-Nya, sebab Ia yang memelihara kamu.",
-                "Marilah kepada-Ku, semua yang letih lesu dan berbeban berat, Aku akan memberi kelegaan kepadamu."
-            ],
-            images: [
-                "1501133531714-bd6700057174", "1507525428034-b723cf961d3e", "1473186536479-10ee74476054", "1518020382113-a7e8fc38eac9", "1490730141103-6cac27aaab94"
-            ]
+            quotes: ["Tuhan adalah gembalaku, takkan kekurangan aku.", "Damai sejahtera Kukasihkan kepadamu.", "Serahkanlah segala kekuatiranmu kepada-Nya."],
+            images: ["1501133531714-bd6700057174", "1507525428034-b723cf961d3e", "1490730141103-6cac27aaab94"]
         },
         'memberkati': {
-            quotes: [
-                "Tuhan memberkati engkau dan melindungi engkau; Tuhan menyinari engkau dengan wajah-Nya.",
-                "Diberkatilah orang yang mengandalkan Tuhan, yang menaruh harapannya pada Tuhan.",
-                "Kiranya Ia memberikan kepadamu apa yang kaukehendaki dan membuat segala rencanamu berhasil.",
-                "Segala perkara dapat kutanggung di dalam Dia yang memberi kekuatan kepadaku."
-            ],
-            images: [
-                "1494639943482-1ddbb363c3aa", "1503437146522-83ecd4994d5a", "1511895426328-dc8714191300", "1518544801044-8cb5043a298a", "1557804506-664101e74a87"
-            ]
+            quotes: ["Tuhan memberkati engkau dan melindungi engkau.", "Diberkatilah orang yang mengandalkan Tuhan."],
+            images: ["1518020382113-a7e8fc38eac9", "1511895426328-dc8714191300", "1506126613408-eca07ce68773"]
         },
         'menguatkan': {
-            quotes: [
-                "Janganlah takut, sebab Aku menyertai engkau, janganlah bimbang, sebab Aku ini Allahmu.",
-                "Tetapi orang-orang yang menanti-nantikan TUHAN mendapat kekuatan baru.",
-                "Sebab Aku ini tahu rancangan-rancangan apa yang ada pada-Ku mengenai kamu, rancangan damai sejahtera.",
-                "Kuatkanlah dan teguhkanlah hatimu, janganlah takut dan jangan gemetar karena mereka."
-            ],
-            images: [
-                "1533227268408-a5b066ed5606", "1493612276216-ee39255c0721", "1522202176988-66273c2fd55f", "1475924156734-496f6cac6fe1", "1506126613408-eca07ce68773"
-            ]
+            quotes: ["Janganlah takut, sebab Aku menyertai engkau.", "Orang yang menanti TUHAN mendapat kekuatan baru."],
+            images: ["1444491741275-3746c854edea", "1533227268408-a5b066ed5606", "1493612276216-ee39255c0721"]
         },
         'sukacita': {
-            quotes: [
-                "Sukacita karena TUHAN itulah perlindunganmu.",
-                "Hati yang gembira adalah obat yang manjur, tetapi semangat yang patah mengeringkan tulang.",
-                "Bersukacitalah senantiasa dalam Tuhan! Sekali lagi kukatakan: Bersukacitalah!",
-                "Inilah hari yang dijadikan TUHAN, marilah kita bersorak-sorak dan bersukacita karenanya!"
-            ],
-            images: [
-                "1516589178584-3c582664d509", "1533733319232-a89abc85b95d", "1506126613408-eca07ce68773", "1521737604891-4121400a3395", "1502086223501-7ea6ecd79368"
-            ]
+            quotes: ["Sukacita karena TUHAN itulah perlindunganmu.", "Bersukacitalah senantiasa dalam Tuhan!"],
+            images: ["1516589178584-3c582664d509", "1533733319232-2110c0a59926", "1501133531714-bd6700057174"]
         }
     },
     'renungan': {
         'menyejukkan': {
-            quotes: [
-                "Saat badai kehidupan menerpa, ingatlah bahwa Yesus adalah nakhoda yang tak pernah meninggalkan kapalmu.",
-                "Kasih Tuhan itu seperti samudera: luas, dalam, dan selalu memeluk kita apa adanya.",
-                "Ketenangan sejati bukan saat masalah hilang, tapi saat kita tahu Tuhan ada di dalam masalah itu.",
-                "Jangan biarkan hari ini berlalu tanpa merasakan pelukan hangat kasih Bapa di surga."
-            ],
-            images: [
-                "1464822759023-5658ad06de22", "1475924156734-496f6cac6fe1", "1507525428034-b723cf961d3e", "1490730141103-6cac27aaab94", "1518020382113-a7e8fc38eac9"
-            ]
+            quotes: ["Saat badai menerpa, Yesus adalah nakhoda kapalmu.", "Kasih Tuhan sejuk seperti embun pagi."],
+            images: ["1464822759023-5658ad06de22", "1507525428034-b723cf961d3e", "1490730141103-6cac27aaab94"]
         },
         'memberkati': {
-            quotes: [
-                "Bersyukur adalah kunci yang membuka pintu berkat-berkat baru dalam hidup kita setiap hari.",
-                "Setiap tetes keringat dan air mata yang kita persembahkan untuk Tuhan akan berbuah kemuliaan.",
-                "Jadilah saluran berkat bagi sesama, maka hidupmu pun akan dipenuhi dengan kelimpahan kasih-Nya.",
-                "Kebaikan dan kemurahan-Mu mengikuti aku seumur hidupku, dan aku akan diam di rumah Tuhan."
-            ],
-            images: [
-                "1533733319232-a89abc85b95d", "1511895426328-dc8714191300", "1557804506-664101e74a87", "1503437146522-83ecd4994d5a", "1494639943482-1ddbb363c3aa"
-            ]
+            quotes: ["Bersyukur membuka pintu berkat baru.", "Jadilah saluran berkat bagi sesama."],
+            images: ["1533733319232-a89abc85b95d", "1511895426328-dc8714191300", "1506126613408-eca07ce68773"]
         },
         'menguatkan': {
-            quotes: [
-                "Iman bukanlah menunggu badai berlalu, tapi belajar menari di tengah hujan bersama Tuhan.",
-                "Ketika lututmu menyentuh lantai untuk berdoa, hatimu menyentuh takhta surga.",
-                "Kegagalan hanyalah cara Tuhan mengarahkanmu ke jalan yang lebih baik bagi rancangan-Nya.",
-                "Berdirilah teguh di atas batu karang keselamatanmu, maka goncangan dunia takkan merubuhkanmu."
-            ],
-            images: [
-                "1522202176988-66273c2fd55f", "1475924156734-496f6cac6fe1", "1499209565751-afdd8eb20de7", "1506126613408-eca07ce68773", "1533227268408-a5b066ed5606"
-            ]
+            quotes: ["Iman menari di tengah hujan bersama Tuhan.", "Lutut menyentuh lantai, hati menyentuh surga."],
+            images: ["1522202176988-66273c2fd55f", "1499209565751-afdd8eb20de7", "1493612276216-ee39255c0721"]
         },
         'sukacita': {
-            quotes: [
-                "Sorak sorai kemenangan akan terdengar di kemah orang-orang benar karena tangan kanan Tuhan.",
-                "Pujian adalah senjata paling ampuh untuk meruntuhkan tembok-tembok keputusasaan.",
-                "Wajah yang berseri-seri mencerminkan hati yang telah menemukan kepuasan di dalam Tuhan.",
-                "Menari dan bernyanyilah bagi Dia, sebab perbuatan-perbuatan-Nya besar dan ajaib!"
-            ],
-            images: [
-                "1533733319232-a89abc85b95d", "1521737604891-4121400a3395", "1516589178584-3c582664d509", "1502086223501-7ea6ecd79368", "1511895426328-dc8714191300"
-            ]
+            quotes: ["Pujian meruntuhkan tembok keputusasaan.", "Wajah berseri mencerminkan hati yang puas."],
+            images: ["1521737604891-4121400a3395", "1516589178584-3c582664d509", "1501133531714-bd6700057174"]
         }
     },
     'janji-tuhan': {
         'menyejukkan': {
-            quotes: [
-                "Aku tidak akan pernah meninggalkan engkau dan Aku tidak akan pernah membiarkan engkau.",
-                "Damai sejahtera-Ku Kuberikan kepadamu, dan dunia tidak dapat mengambilnya darimu.",
-                "Janganlah gelisah hatimu; percayalah kepada Allah, percayalah juga kepada-Ku.",
-                "Sebab Aku, TUHAN, Allahmu, memegang tangan kananmu dan berkata: Janganlah takut."
-            ],
-            images: [
-                "1518020382113-a7e8fc38eac9", "1473186536479-10ee74476054", "1507525428034-b723cf961d3e", "1490730141103-6cac27aaab94", "1464822759023-5658ad06de22"
-            ]
+            quotes: ["Aku tidak akan pernah meninggalkan engkau.", "Damai sejahtera-Ku Kuberikan kepadamu."],
+            images: ["1464822759023-5658ad06de22", "1507525428034-b723cf961d3e", "1490730141103-6cac27aaab94"]
         },
         'memberkati': {
-            quotes: [
-                "Aku akan memberkati engkau berlimpah-limpah dan membuat keturunanmu sangat banyak.",
-                "Tuhan akan membuka bagimu perbendaharaan-Nya yang melimpah, yakni langit, untuk memberi hujan.",
-                "Segala yang dilakukan tangannya dibuat Tuhan berhasil.",
-                "Berbahagialah orang yang takut akan TUHAN, yang sangat suka kepada perintah-perintah-Nya."
-            ],
-            images: [
-                "1494639943482-1ddbb363c3aa", "1511895426328-dc8714191300", "1557804506-664101e74a87", "1503437146522-83ecd4994d5a", "1501133531714-bd6700057174"
-            ]
+            quotes: ["Tuhan membuka perbendaharaan langit bagimu.", "Segala yang kamu kerjakan dibuat-Nya berhasil."],
+            images: ["1518020382113-a7e8fc38eac9", "1511895426328-dc8714191300", "1506126613408-eca07ce68773"]
         },
         'menguatkan': {
-            quotes: [
-                "Sebab Aku ini tahu rancangan-rancangan apa yang ada pada-Ku mengenai kamu, yaitu rancangan damai sejahtera.",
-                "Pencobaan-pencobaan yang kamu alami tidak melampaui kekuatanmu.",
-                "Dia memberi kekuatan kepada yang lelah dan menambah semangat kepada yang tiada berdaya.",
-                "Janganlah takut, sebab Aku menyertai engkau, janganlah bimbang, sebab Aku ini Allahmu."
-            ],
-            images: [
-                "1522202176988-66273c2fd55f", "1475924156734-496f6cac6fe1", "1499209565751-afdd8eb20de7", "1506126613408-eca07ce68773", "1533227268408-a5b066ed5606"
-            ]
+            quotes: ["Pencobaanmu tidak melampaui kekuatanmu.", "Dia menambah semangat kepada yang tiada berdaya."],
+            images: ["1522202176988-66273c2fd55f", "1499209565751-afdd8eb20de7", "1493612276216-ee39255c0721"]
         },
         'sukacita': {
-            quotes: [
-                "Ratapanku telah Kauubah menjadi tari-tarian, kain kabungku telah Kaubuka, diganti dengan sukacita.",
-                "Mereka yang menabur dengan air mata, akan menuai dengan sorak-sorai.",
-                "Sukacita yang dari Tuhan adalah kekuatanku selamanya.",
-                "Sebab Tuhan adalah adil, Ia mengasihi keadilan; orang yang tulus akan memandang wajah-Nya."
-            ],
-            images: [
-                "1533733319232-a89abc85b95d", "1521737604891-4121400a3395", "1516589178584-3c582664d509", "1502086223501-7ea6ecd79368", "1511895426328-dc8714191300"
-            ]
+            quotes: ["Ratapanku telah Kauubah menjadi tari-tarian.", "Menabur air mata, menuai sorak-sorai."],
+            images: ["1521737604891-4121400a3395", "1516589178584-3c582664d509", "1501133531714-bd6700057174"]
         }
     },
     'motivasi-kristen': {
         'menyejukkan': {
-            quotes: [
-                "Jangan biarkan hari ini merampas damai sejahteramu, sebab Tuhan masih bertahta di atas segalanya.",
-                "Beristirahatlah di dalam hadirat Tuhan, karena di sana ada pemulihan bagi jiwa yang lelah.",
-                "Setiap langkah kecil yang kamu ambil bersama Tuhan adalah perjalanan menuju kedewasaan iman.",
-                "Cukupkanlah dirimu dengan apa yang ada padamu, karena Dia adalah Jehovah Jireh."
-            ],
-            images: [
-                "1464822759023-5658ad06de22", "1475924156734-496f6cac6fe1", "1507525428034-b723cf961d3e", "1490730141103-6cac27aaab94", "1518020382113-a7e8fc38eac9"
-            ]
+            quotes: ["Jangan biarkan hari ini merampas damaimu.", "Beristirahatlah dalam hadirat-Nya."],
+            images: ["1464822759023-5658ad06de22", "1507525428034-b723cf961d3e", "1490730141103-6cac27aaab94"]
         },
         'memberkati': {
-            quotes: [
-                "Keberhasilan sejati bukanlah tentang seberapa banyak yang kita punya, tapi seberapa banyak kita menjadi berkat.",
-                "Layani Tuhan dengan segenap hatimu, maka pintu-pintu anugerah akan terbuka lebar bagimu.",
-                "Kasih yang kamu tabur hari ini akan melahirkan tuaian yang manis di masa depan.",
-                "Segala sesuatu yang kamu kerjakan, lakukanlah itu dengan segenap hatimu seperti untuk Tuhan."
-            ],
-            images: [
-                "1533733319232-a89abc85b95d", "1511895426328-dc8714191300", "1557804506-664101e74a87", "1503437146522-83ecd4994d5a", "1494639943482-1ddbb363c3aa"
-            ]
+            quotes: ["Layani Tuhan dengan segenap hatimu.", "Kasih yang kamu tabur akan manis hari nanti."],
+            images: ["1533733319232-a89abc85b95d", "1511895426328-dc8714191300", "1506126613408-eca07ce68773"]
         },
         'menguatkan': {
-            quotes: [
-                "Jangan menyerah, pahlawan iman tidak dibentuk di tempat tidur yang empuk, tapi di medan pergumulan.",
-                "Masa depanmu tidak ditentukan oleh masa lalumu, tapi oleh kasih setia Tuhan yang baru setiap pagi.",
-                "Tuhan sedang memprosesmu menjadi emas yang murni; tetaplah bertahan dalam perapian iman.",
-                "Kemenangan sudah di depan mata bagi mereka yang tidak melepaskan pengharapannya pada Kristus."
-            ],
-            images: [
-                "1522202176988-66273c2fd55f", "1475924156734-496f6cac6fe1", "1499209565751-afdd8eb20de7", "1506126613408-eca07ce68773", "1533227268408-a5b066ed5606"
-            ]
+            quotes: ["Pahlawan iman dibentuk di medan pergumulan.", "Tuhan sedang memprosesmu menjadi emas murni."],
+            images: ["1522202176988-66273c2fd55f", "1499209565751-afdd8eb20de7", "1493612276216-ee39255c0721"]
         },
         'sukacita': {
-            quotes: [
-                "Hidup ini adalah anugerah, rayakanlah dengan hati yang meluap dengan syukur dan pujian.",
-                "Jadilah saksi Kristus yang penuh sukacita, agar dunia melihat cahaya-Nya melalui senyummu.",
-                "Hari ini adalah kesempatan baru untuk memuliakan nama Tuhan dengan talenta yang ada padamu.",
-                "Mari bersorak bagi Gunung Batu Keselamatan kita dengan lagu baru yang penuh gairah!"
-            ],
-            images: [
-                "1533733319232-a89abc85b95d", "1521737604891-4121400a3395", "1516589178584-3c582664d509", "1502086223501-7ea6ecd79368", "1511895426328-dc8714191300"
-            ]
+            quotes: ["Hidup ini anugerah, rayakan dengan syukur.", "Jadilah saksi Kristus yang penuh sukacita."],
+            images: ["1521737604891-4121400a3395", "1516589178584-3c582664d509", "1501133531714-bd6700057174"]
         }
     }
 };
@@ -250,8 +137,8 @@ const keywordMap = {
     }
 };
 
-// Generate Logic
-const generateContent = () => {
+// Generate Logic - NOW WITH REAL AI (GEMINI)
+const generateContent = async () => {
     // 1. UI Loading State
     generateBtn.disabled = true;
     generateBtn.style.opacity = '0.7';
@@ -260,63 +147,104 @@ const generateContent = () => {
     const category = categorySelect.value;
     const tone = toneSelect.value;
     
-    // Get precise data
-    const categoryData = aiData[category];
-    const specificData = categoryData[tone] || categoryData['menyejukkan'];
+    try {
+        // CALL THE SECURE API (VERCEL FUNCTION)
+        const response = await fetch('/api/generate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ category, tone })
+        });
 
-    // 2. Select Content 
-    const quote = getRandomItem(specificData.quotes);
-    
-    // BETTER RANDOM IMAGE LOGIC:
-    // We combine curated IDs for quality + keyword search for variety
-    let imageUrl = "";
-    
-    // 50-50 chance to use curated ID (high quality) or Keyword Search (high variety)
-    const useCurated = Math.random() > 0.5;
-    const photoId = getRandomItem(specificData.images);
+        if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            throw new Error(errorData.error || "Gagal mengambil data dari AI.");
+        }
 
-    if (useCurated && photoId) {
-        imageUrl = `https://images.unsplash.com/photo-${photoId}?q=80&w=1080&auto=format&fit=crop`;
-    } else {
-        const categoryKeywords = keywordMap[category] || {};
-        const baseKeyword = categoryKeywords[tone] || 'christianity faith';
+        const aiResult = await response.json();
+        const { quote, image_prompt } = aiResult;
+
+        // 2. Select / Construct Image
+        // Cleanup AI prompt: only take adjectives and nouns
+        const cleanPrompt = image_prompt
+            .replace(/a |an |the |of |with |and |in |on |at |by /gi, '') // Hapus kata sambung
+            .replace(/[^a-zA-Z0-9 ]/g, '') 
+            .split(' ')
+            .filter(word => word.length > 2)
+            .slice(0, 3) // Cukup 3 kata kunci utama aja
+            .join(',');
+            
+        console.log("Gemini Quote:", quote);
+        console.log("Gemini Visual Prompt:", image_prompt);
+        console.log("Cleaned Keywords:", cleanPrompt);
+
         const randomSeed = Math.floor(Math.random() * 1000);
-        // Using a more reliable random service or appending random seed to Unsplash images
-        imageUrl = `https://images.unsplash.com/photo-${photoId || '1507525428034-b723cf961d3e'}?q=80&w=1080&auto=format&fit=crop&sig=${randomSeed}`;
+        const searchKeyword = `${category},${tone},${cleanPrompt}`;
+        const imageUrl = `https://loremflickr.com/1080/1350/${encodeURIComponent(searchKeyword)}?lock=${randomSeed}`;
+
+        // 3. Update Text Content & Styles
+        canvasQuote.textContent = quote;
+        quoteInput.value = quote;
+        canvasQuote.style.fontFamily = fontSelect.value;
+        canvasElement.style.aspectRatio = aspectRatioSelect.value;
+        const customBrand = brandingInput.value.trim();
+        canvasBrandText.textContent = customBrand ? customBrand : "FamPost";
         
-        // If we really want full random by keyword without deprecated source:
-        // We use LoremFlickr as a reliable proxy for Unsplash keyword-based random
-        imageUrl = `https://loremflickr.com/1080/1080/${encodeURIComponent(baseKeyword.replace(/ /g, ','))}?lock=${randomSeed}`;
+        // 4. Reveal strategy
+        loadingText.classList.add('hidden');
+        generateBtn.disabled = false;
+        generateBtn.style.opacity = '1';
+        previewWrapper.classList.remove('hidden');
+        previewWrapper.scrollIntoView({ behavior: 'smooth', block: 'end' });
+
+        // 5. Handle Image Loading with Timeout
+        let imageLoaded = false;
+        
+        // Timeout 3 detik: kalau kelamaan cari gambar, pake fallback
+        const loadTimeout = setTimeout(() => {
+            if (!imageLoaded) {
+                console.warn("Image load timeout, using fallback...");
+                const fallbackId = "1507525428034-b723cf961d3e"; 
+                canvasImage.src = `https://images.unsplash.com/photo-${fallbackId}?q=80&w=1080&auto=format&fit=crop`;
+            }
+        }, 3000);
+
+        canvasImage.onload = () => {
+            imageLoaded = true;
+            clearTimeout(loadTimeout);
+            setTimeout(saveToHistory, 500);
+        };
+
+        canvasImage.onerror = () => {
+            imageLoaded = true;
+            clearTimeout(loadTimeout);
+            console.warn("Retrying image load with fallback...");
+            const fallbackId = "1518020382113-a7e8fc38eac9"; 
+            canvasImage.src = `https://images.unsplash.com/photo-${fallbackId}?q=80&w=1080&auto=format&fit=crop`;
+        };
+
+        // Trigger image load
+        canvasImage.src = imageUrl;
+
+    } catch (error) {
+        console.error("Critical AI Generation Error:", error);
+        
+        // FALLBACK TO OLD MOCK DATA IF API FAILS
+        const categoryData = aiData[category];
+        const specificData = categoryData[tone] || categoryData['menyejukkan'];
+        const fallbackQuote = getRandomItem(specificData.quotes);
+        const fallbackImageId = getRandomItem(specificData.images);
+        
+        canvasQuote.textContent = fallbackQuote;
+        quoteInput.value = fallbackQuote;
+        canvasImage.src = `https://images.unsplash.com/photo-${fallbackImageId}?q=80&w=1080&auto=format&fit=crop`;
+        
+        // Finalize UI
+        loadingText.classList.add('hidden');
+        generateBtn.disabled = false;
+        generateBtn.style.opacity = '1';
+        previewWrapper.classList.remove('hidden');
+        previewWrapper.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
-
-    // 3. Update Text Content & Styles
-    canvasQuote.textContent = quote;
-    quoteInput.value = quote;
-    canvasQuote.style.fontFamily = fontSelect.value;
-    canvasElement.style.aspectRatio = aspectRatioSelect.value;
-    const customBrand = brandingInput.value.trim();
-    canvasBrandText.textContent = customBrand ? customBrand : "FamPost";
-    
-    // 4. Reveal strategy
-    loadingText.classList.add('hidden');
-    generateBtn.disabled = false;
-    generateBtn.style.opacity = '1';
-    previewWrapper.classList.remove('hidden');
-    previewWrapper.scrollIntoView({ behavior: 'smooth', block: 'end' });
-
-    // 5. Handle Image Loading
-    canvasImage.onload = () => {
-        setTimeout(saveToHistory, 500);
-    };
-
-    canvasImage.onerror = () => {
-        console.warn("Retrying image load...");
-        const fallbackId = "1507525428034-b723cf961d3e"; // Beautiful Bible fallback
-        canvasImage.src = `https://images.unsplash.com/photo-${fallbackId}?q=80&w=1080&auto=format&fit=crop`;
-    };
-
-    // Trigger image load
-    canvasImage.src = imageUrl;
 };
 
 // Download Logic
@@ -548,6 +476,20 @@ clearHistoryBtn.addEventListener('click', () => {
 fontSelect.addEventListener('change', () => {
     canvasQuote.style.fontFamily = fontSelect.value;
     saveToHistory(); // Auto save change
+});
+
+// Aspect Ratio Change event (Real-time update)
+aspectRatioSelect.addEventListener('change', () => {
+    canvasElement.style.aspectRatio = aspectRatioSelect.value;
+    // Update preview label text (optional but helpful)
+    const ratioLabel = document.querySelector('.canvas-header h3');
+    if (ratioLabel) {
+        let labelText = "Preview ";
+        if (aspectRatioSelect.value === "1/1") labelText += "(Square 1:1)";
+        else if (aspectRatioSelect.value === "4/5") labelText += "(Portrait 4:5)";
+        else if (aspectRatioSelect.value === "9/16") labelText += "(Story 9:16)";
+        ratioLabel.textContent = labelText;
+    }
 });
 
 // Event Listeners Initialization

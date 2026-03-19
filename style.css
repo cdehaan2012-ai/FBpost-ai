@@ -316,7 +316,8 @@ select:focus, .custom-input:focus {
 /* Actual Canvas Element for FB Square */
 .capture-canvas {
     position: relative;
-    width: 100%;
+    width: auto; /* Biarkan dia fleksibel mengikuti rasio */
+    max-width: 100%;
     margin: 0 auto;
     aspect-ratio: 1 / 1;
     background-color: #000;
@@ -324,7 +325,8 @@ select:focus, .custom-input:focus {
     overflow: hidden;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
     container-type: inline-size;
-    max-height: 70vh; /* Prevent flying off on mobile screens */
+    max-height: 75vh; /* Batas tinggi supaya tidak kepanjangan */
+    transition: aspect-ratio 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #canvas-image {

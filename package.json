@@ -1,0 +1,12 @@
+{
+  "name": "fampost-ai",
+  "version": "1.0.0",
+  "description": "High-Quality Family Content Generator",
+  "main": "main.js",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0"
+  },
+  "scripts": {
+    "start": "serve ."
+  }
+}
