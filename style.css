@@ -37,8 +37,9 @@ body {
 
 .app-container {
     width: 100%;
-    max-width: 1100px; /* Lebarkan kontainer utama */
+    max-width: 1200px; /* Lebarkan sedikit lagi untuk 2 kolom */
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 /* Header */
@@ -79,19 +80,34 @@ body {
 .main-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: start;
+    width: 100%;
 }
 
-@media (min-width: 860px) {
+/* Responsive Layout Logic */
+@media (min-width: 1024px) {
     .main-content {
-        max-width: 800px; /* Narrower for better reading in linear layout */
+        grid-template-columns: 400px 1fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+
+    .preview-section {
+        position: sticky;
+        top: 2rem;
+        margin-top: 0 !important;
+    }
+
+    .history-section {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main-content {
+        max-width: 720px;
         margin: 0 auto;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "controls"
-            "preview"
-            "history";
     }
 }
 
@@ -105,7 +121,6 @@ body {
     padding: 2rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, border-color 0.3s ease;
-    grid-area: controls;
 }
 
 .glass-panel:hover {
@@ -256,21 +271,12 @@ select:focus, .custom-input:focus {
     display: none !important;
 }
 
-/* Canvas Preview Layout */
+/* Preview Section Tweaks */
 .preview-section {
     animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    grid-area: preview;
-    margin-top: 1.5rem;
-    position: relative; /* Ensure it stays in normal document flow */
+    margin-top: 0;
+    position: relative;
     z-index: 10;
-}
-
-/* Remove problematic sticky positioning from previous iteration */
-@media (min-width: 1024px) {
-    .preview-section {
-        position: relative; 
-        top: auto;
-    }
 }
 
 @keyframes slideUp {
@@ -498,7 +504,7 @@ select:focus, .custom-input:focus {
     border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 1.5rem;
-    grid-area: history;
+    grid-area: unset;
     position: relative;
     z-index: 5;
 }
@@ -635,13 +641,15 @@ select:focus, .custom-input:focus {
     }
     
     .app-header p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        padding: 0 1rem;
     }
     
     .canvas-header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+        align-items: stretch;
+        gap: 0.75rem;
     }
     
     .action-buttons {
