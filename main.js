@@ -503,6 +503,11 @@ quoteInput.addEventListener('input', (e) => {
     canvasQuote.textContent = e.target.value;
 });
 
+// Branding Text Sync (Real-time update)
+brandingInput.addEventListener('input', (e) => {
+    canvasBrandText.textContent = e.target.value.trim() ? e.target.value.trim() : "FamPost";
+});
+
 // Canvas contenteditable sync back to textarea
 canvasQuote.addEventListener('input', () => {
     quoteInput.value = canvasQuote.textContent;
